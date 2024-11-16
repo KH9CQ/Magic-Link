@@ -9,113 +9,111 @@
     <title>爪云VPS节点线路选择&Clawcloud优惠码 - 最高性价比、稳定、直连延迟低</title>
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/KH9CQ/Magic-Link@refs/heads/main/img/favicon.ico" type="image/x-icon">
     <style>
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --container-bg: #ffffff;
+            --link-color: #4CAF50;
+            --blockquote-bg: #e8f5e9;
+            --blockquote-border: #4CAF50;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --container-bg: #1e1e1e;
+            --link-color: #81c784;
+            --blockquote-bg: #263238;
+            --blockquote-border: #81c784;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: var(--container-bg);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
-            color: #4CAF50;
-            font-size: 2.5em;
-            margin-top: 20px;
-        }
-        h2 {
-            color: #4CAF50;
-            font-size: 1.8em;
-            margin-top: 20px;
-            text-align: left; /* 靠左显示 */
-        }
-        h3 {
-            color: #4CAF50;
-            font-size: 1.5em;
-            margin-top: 15px;
-            text-align: left; /* 靠左显示 */
-        }
-        .sub-title { /* 针对小一点的标题，如“主要优点：” */
-            font-size: 1.3em;
-            color: #333;
-            margin-top: 10px;
-            text-align: left;
-        }
-        p {
-            margin: 10px 0;
-            text-align: justify;
-        }
-        ul, ol {
-            margin: 10px 20px;
-            padding: 0;
-        }
-        ul li, ol li {
-            margin: 5px 0;
+        h1, h2, h3 {
+            color: var(--link-color);
         }
         a {
-            color: #4CAF50;
+            color: var(--link-color);
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
         blockquote {
             margin: 20px 0;
             padding: 15px;
-            background: #e8f5e9;
-            border-left: 5px solid #4CAF50;
+            background: var(--blockquote-bg);
+            border-left: 5px solid var(--blockquote-border);
         }
-        blockquote p {
-            margin: 0;
-            font-style: italic;
-        }
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #ccc;
-            margin: 20px 0;
-        }
-        footer {
-            text-align: center;
-            margin: 20px 0;
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: var(--container-bg);
+            color: var(--text-color);
+            border: 1px solid var(--link-color);
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
             font-size: 0.9em;
-            color: #777;
+        }
+        .theme-toggle:hover {
+            background-color: var(--link-color);
+            color: var(--container-bg);
         }
     </style>
+    <script>
+        // 检测用户的系统首选颜色模式
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-048H09JNGL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        // 设置主题
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        };
 
-  gtag('config', 'G-048H09JNGL');
-</script>
-    
+        // 初始化主题
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                setTheme(userPrefersDark ? 'dark' : 'light');
+            }
+
+            // 切换主题功能
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        });
+    </script>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle">切换主题</button>
     <div class="container">
         <h1>爪云VPS节点选择&Clawcloud优惠码</h1>
-	<strong>ClawCloud官网地址 <span style="color: red;"> (优惠码：9B2EQsvip)</span>： 
-    <a href="https://claw.cloud/?irclickid=Sv8WalRBbxyKWlDRw%3Az8ezTdUkCTdvwkUVJb0s0&irpid=5798032&irgwc=1" target="_blank">
-        https://claw.cloud/
-    </a></strong>
-		
-       <p>
+        <strong>ClawCloud官网地址 <span style="color: red;"> (优惠码：9B2EQsvip)</span>： 
+            <a href="https://claw.cloud/?irclickid=Sv8WalRBbxyKWlDRw%3Az8ezTdUkCTdvwkUVJb0s0&irpid=5798032&irgwc=1" target="_blank">
+                https://claw.cloud/
+            </a>
+        </strong>
+        <p>
         <hr>
 
         <h2>一、写在前面</h2>
